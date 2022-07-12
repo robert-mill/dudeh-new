@@ -111,57 +111,31 @@ class About extends Component {
         <div className="row about-pan">
           <div className={`col-lg-9 col-md-12`}>
             <div className="row">
-              {groupData && (
-                <React.Fragment>
+             
+               
                 <div className="col-lg-2 col-md-12 article-index">
                   <div className="about-pan-head">About articles</div>
-                  {groupData &&
-                    groupData.map((m) => (
-                      <div className="gd-bx" key={m._id}>
+                 
+                      <div className="gd-bx">
                         <div className="gd-bx-in">
-                          {m.heading && (
+                         
                             <span className="gd-bx-hd">
-                              <h3>{stripHtml(m.heading)} {filtered._id === m._id?parse(`<i class="fa fa-check fa-2x" aria-hidden="true" style="float:right"></i>`):""}</h3>
+                              <h3>About Dennis Udeh</h3>
                             </span>
-                          )}
-                          <span
-                            className="gd-mre"
-                            onClick={() => this.handleGroupClick(m)}
-                          >
-                            More...
-                          </span>
+                         
+                         
                         </div>
                       </div>
-                    ))}
+                
                 
 
                   
                 </div>
                  <div className="col-lg-7  col-md-12 article-index ">
-                          {filtered && (<div className="aboutBox" style={{border:"1px solid rgba(100,100,100,0.3)", margin:"0.5rem", padding:"0.5rem"}}>
-                            <div style={{width:"100%", display:"block", padding:"0.3rem", backgroundColor:"rgba(0,0,0,0.5)", color:"rgba(255,255,255,1)" }}>{parse(filtered.heading)}</div>
-                            {filtered.image && <img src={filtered.image} alt={filtered.heading} style={{width:"100%", maxWidth:"100%"}}/>}
-                            <span className="articleCaption">{parse(filtered.caption)}</span>
-                              {parse(filtered.body)}</div>)}
-
-                              {auth.getRole() && auth.getCurrentUser() && (
-                                <React.Fragment>
-                                <Link className="navbar-brand" to={`/about/${filtered._id}`}>
-                                <i
-                                  className="fa fa-pencil-square-o fa-2x"
-                                  aria-hidden="true"
-                                ></i>
-                              </Link>
-                              <div onClick={() => this.handleDelete(filtered)}>
-                              <i
-                                className="fa fa-trash fa-2x"
-                                aria-hidden="true"
-                              ></i>
-                            </div></React.Fragment>
-                              )}
+                          <p>This has been disabled at this time</p>
                 </div>
-                </React.Fragment>
-              )}
+                
+              
              
             </div>
           </div>
