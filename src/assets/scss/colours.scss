@@ -1,0 +1,29 @@
+$siteBlue: rgba(0, 135, 255, 0.8);
+$siteWhite: rgba(255, 255, 255, 1);
+$siteBlack: rgba(0, 0, 0, 1);
+$siteRed: rgba(106, 3, 3, 1);
+$siteGray: rgba(125, 125, 125, 1);
+$siteBrown: rgba(165,42,42,1);
+@mixin siteCol-BlackTint($alpha: 1) {
+  color: rgba(0, 0, 0, $alpha);
+}
+@mixin siteCol-WhiteTint($alpha: 1) {
+  color: rgba(255, 255, 255, $alpha);
+}
+
+@mixin siteBG-BlackTint($alpha: 1) {
+  background-color: rgba(0, 0, 0, $alpha) !important;
+}
+@mixin siteBG-WhiteTint($alpha: 1) {
+  background-color: rgba(255, 255, 255, $alpha) !important;
+}
+@mixin siteBG-BlueTint($alpha: 1) {
+  background-color: rgba(0, 135, 255, $alpha) !important;
+}
+
+@mixin siteCol-RedTint($alpha: 1) {
+  color: rgba(106, 3, 3, $alpha);
+}
+@mixin siteBG-RedTint($alpha: 1) {
+  background-color: rgba(106, 3, 3, $alpha);
+}
