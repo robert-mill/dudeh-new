@@ -14,7 +14,7 @@ const NavBar = () => {
 							<img
 								className=""
 								src="/du-logo.png"
-								alt="Dennis Udeh"
+								alt="Dennis Udeh.."
 								style={{ height: 'auto', maxHeight: '100px' }}
 							/>
 						</div>
