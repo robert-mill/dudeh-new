@@ -1,14 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import {stripHtml} from "string-strip-html";
-import parse from "html-react-parser";
-import {
-  getAboutGroups,
-  deleteAboutGroup,
-} from "../services/aboutGroupService";
-import { getAbouts, deleteAbout } from "../services/aboutService";
 
-import auth from "../services/authService";
+
 import { toast } from "react-toastify";
 class About extends Component {
   state = {
@@ -91,22 +83,7 @@ class About extends Component {
       <React.Fragment>
         <div className=""></div>
         <style>{`.spinner{display:none;"`}</style>
-        {auth.getRole() && auth.getCurrentUser() && (
-          <React.Fragment>
-            <div className="row">
-              <button className="btn btn-primary">
-                <Link className="navbar-brand" to={`/about/new`}>
-                  New main article
-                </Link>
-              </button>
-              <button className="btn btn-primary">
-                <Link className="navbar-brand" to={`/aboutGroup/new`}>
-                  New sub panal
-                </Link>
-              </button>
-            </div>
-          </React.Fragment>
-        )}
+       
 
         <div className="row about-pan">
           <div className={`col-lg-9 col-md-12`}>
